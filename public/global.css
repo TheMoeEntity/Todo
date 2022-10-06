@@ -1,0 +1,335 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat !important;
+}
+html {
+    background-repeat: no-repeat !important;
+}
+.attribution ul li {
+    display: inline !important;
+    margin-left: 15px;
+}
+.attribution {
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-top: 1px solid #25273C;
+    width: 100%;
+    position: absolute;
+    top: 80vh;
+    
+}
+a {
+    text-decoration: none;
+    color: #25273C;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poppins',sans-serif;
+    background-color: #151521;
+    transition: background 1s ease;
+}
+#mainwrapper {
+    width: 100%;
+    height: 100%;
+    max-height: auto;
+    max-width: 601px;
+    margin: auto;
+}
+button {
+    cursor: pointer;
+}
+header {
+    width: 100%;
+    height: 28%;
+    position: relative;
+    background: url('/assets/images/bg-mobile-dark.jpg');
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    transition: background 1s ease;
+}
+
+.toolbar{
+    position: absolute;
+    width: 90%;
+    height: 65%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-55%);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+.toolbar>div {
+    width: 100%;
+    height: 40%;
+}
+.toolbar>div:nth-child(2) {
+    background-color: #25273C;
+    border-radius: 6px;
+    transition: background 1s ease;
+}
+.title-and-switch {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+h1 {
+    color:#fff;
+    letter-spacing: 5px;
+}
+button {
+    background-color: transparent;
+    border: none;
+}
+.title-and-switch button {
+    background: url("/assets/images/icon-sun.svg");
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat !important;
+    transition: background 1s ease;
+}
+.circle {
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: 1px solid rgba(136, 136, 136, 0.25);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.todo-item img {
+    width: 15px !important;
+    height: 15px !important;
+    cursor: pointer;
+}
+.todoinput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+}
+input {
+    width: 77%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border:none;
+    padding: 0 20px;
+    color: #fff;
+    font-size: 15px;
+    transition: color 1s ease;
+    
+}
+form input::placeholder {
+    font-size: 15px;
+    color: lightgray;
+    opacity: 0.7;
+}
+.main-content {
+    width: 100%;
+    height: 72%;
+    position: relative;
+    transition: background 1s ease;
+}
+.maincontent-wrapper {
+    z-index: 1;
+    color: lightgray;
+
+}
+#todo-all {
+    height: auto;
+    border-radius: 6px;
+    list-style-type: none;
+    background-color: #25273C;
+    padding-bottom: 25px;
+    box-shadow: 0.5px 10px 20px rgba(0,0,0,0.15);
+    width: 100%;
+    z-index: 22;
+    transition: background 1s ease, height 0.5 ease;
+    overflow-x: hidden;
+   
+    
+}
+#toggle-buttons {
+    width: 100%;
+    height: auto;
+    margin: 30px auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    font-size: 13px;
+    align-items: center;
+    z-index: 99999;
+    transition: background 1s ease, top 0.25s ease;
+    padding-bottom: 30px;
+
+}
+.toggleWrapper {
+    background-color: #25273C;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    height: 70px;
+    flex-flow: row wrap;
+    justify-content: center; 
+    width: 100%;
+    margin-bottom: 60px;
+    transition: background 1s ease;
+    box-shadow: 0.5px 10px 20px rgba(0,0,0,0.15);
+}
+.toggleWrapper > button {
+    margin: auto 12px;
+    font-size: 17px;
+    color: rgba(136, 136, 136, 0.4);
+    font-weight: bold;
+    font-size: 13px;
+}
+.toggleWrapper > button.active, #toggleBtns-large button.active {
+    color: #2d3aaf;
+}
+.todo-item {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(136, 136, 136, 0.25);
+    transition: transform 0.5s ease, background 1s ease;
+}
+.removed {
+    transform: translateX(-100vw);
+    /* transform: scale(0.1); */
+}
+.todo-item input {
+    width: 72%;
+    font-size: 13px;
+    cursor: pointer;
+    
+}
+
+.todo-item input:nth-child(1) {
+    text-decoration-line: line-through !important;
+}
+
+ul .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+ul .circle.checked {
+    /* Created with https://www.css-gradient.com */
+    background: #58DDFF;
+    background: -webkit-radial-gradient(top left, #58DDFF, #C058F3);
+    background: -moz-radial-gradient(top left, #58DDFF, #C058F3);
+    background: radial-gradient(to bottom right, #58DDFF, #C058F3);
+    background-image: url('/assets/images/icon-check.svg');
+    background-size: 50%;
+    background-position: center;
+}
+ul .circle:hover {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #58DDFF;
+}
+.todo-actions {
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    justify-content: space-between;
+    margin: auto;
+    color: rgba(136, 136, 136, 0.4);
+    padding-top: 7%;
+    font-size: 13px;
+}
+.todo-actions > div {
+    display: none;
+}
+.todo-actions > div button {
+    margin:auto 20px;
+}
+.todo-actions button {
+    color: rgba(136, 136, 136, 0.4);
+    font-size: 13px;
+}
+h4 {
+    color: rgba(136, 136, 136, 0.4);
+    font-weight: lighter;
+}
+@media screen and (max-width:340px) {
+    header {
+        background-size: cover;
+    }
+}
+@media screen and (min-width:400px) and (max-width:600px) {
+    header {
+        background-size: cover;
+    }
+}
+@media screen and (max-height:750px) {
+    header {
+        background-size: cover;
+    }
+    .toolbar>div {
+        height: 45%;
+    }
+}
+@media screen and (max-width:600px) {
+    header {
+        background: url(/assets/images/bg-mobile-dark.jpg);
+    }
+}
+@media screen and (min-width:601px) {
+    header {
+        background: url(/assets/images/bg-desktop-dark.jpg);
+        background-repeat: no-repeat;
+        height: 300px;
+    }
+    .toggleWrapper {
+        display: none !important;
+    }
+    .maincontent-wrapper {
+        top:-40px !important;
+    }
+    .todo-actions > div {
+        display: block;
+    }
+    .todo-item input {
+        width: 85%;
+    }
+    .todo-item {
+        height: 75px;
+    }
+    input {
+        width:87%;
+    }
+    #mainwrapper {
+        max-width: 100%;
+    }
+    .main-content {
+        max-width: 650px;
+        margin: 0 auto;
+        height: 55%;
+    }
+    .toolbar>div {
+        height: 36%;
+    }
+    .toolbar {
+        max-width: 650px;
+    }
+    .maincontent-wrapper {
+        width: 100%;
+    }
+}
